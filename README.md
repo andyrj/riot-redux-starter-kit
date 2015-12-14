@@ -7,9 +7,7 @@ This is a simple project that has everything setup for TDD/BDD nodejs and browse
 
 I am not taking advantage of the immutable state in my components.render methods, I should probably add some === comparisons before updating each of them somehow.
 
-I followed along with [Dan Abramov on egghead.io](https://egghead.io/lessons/javascript-redux-the-single-immutable-state-tree) to build this project.
-
-Redux is a brilliant little development pattern and Dan is awesome.
+I followed along with [Dan Abramov on egghead.io](https://egghead.io/lessons/javascript-redux-the-single-immutable-state-tree) to build this project. Redux is a brilliant little development pattern and Dan is awesome.
 
 To be sure I attribute credit for the config and testing portions I adapted for this project I used bits and pieces/inspiration from the following:
  * Inspired from [react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit) only part I am really missing is a hot-loader, live-loader is sufficient for my purposes
