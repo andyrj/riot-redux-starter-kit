@@ -1,0 +1,49 @@
+{
+  "name": "riot-redux-starter-kit",
+  "version": "1.0.0",
+  "description": "starter kit for isomorphic riot redux projects, implementing yet another todo app",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -f dist/*.js && rm -f dist/*.gz && rm -f dist/*.map",
+    "build": "webpack",
+    "build:prod": "PROD_ENV=1 webpack",
+    "build:watch": "watch 'npm run build' src/ -d",
+    "start": "npm run build:watch & live-reload --port 3000 dist/ & serve --port 8080 dist/",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
+    "test:cov": "babel-node ./node_modules/.bin/isparta cover _mocha -- --compilers js:babel-core/register  --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
+    "test:watch": "npm run test -- --watch"
+  },
+  "author": "Andy Johnson <andyrjohnson82@gmail.com>",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
+  },
+  "dependencies": {
+    "redux": "^3.0.5",
+    "redux-thunk": "^1.0.1",
+    "riot": "^2.3.11"
+  },
+  "devDependencies": {
+    "babel": "^6.3.13",
+    "babel-cli": "^6.3.17",
+    "babel-core": "^6.3.17",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-2": "^6.3.13",
+    "chai": "^3.4.1",
+    "compression-webpack-plugin": "^0.2.0",
+    "deep-freeze-strict": "^1.1.1",
+    "isparta": "^4.0.0",
+    "istanbul": "^0.4.1",
+    "jsdom": "^7.2.1",
+    "live-reload": "^1.1.0",
+    "mocha": "^2.3.4",
+    "riotjs-loader": "^1.2.0",
+    "serve": "^1.4.0",
+    "watch": "^0.16.0",
+    "webpack": "^1.12.9"
+  }
+}
