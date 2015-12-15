@@ -4,6 +4,7 @@
   "description": "starter kit for isomorphic riot redux projects, implementing yet another todo app",
   "main": "index.js",
   "scripts": {
+    "postinstall": "cp index.html dist/",
     "clean": "rm -f dist/*.js && rm -f dist/*.gz && rm -f dist/*.map",
     "build": "webpack",
     "build:prod": "PROD_ENV=1 webpack",
