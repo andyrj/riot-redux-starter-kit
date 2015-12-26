@@ -10,6 +10,7 @@ module.exports = {
 		],
 		vendor: [
 			'redux',
+			'redux-thunk',
 			'riot'
 		]
 	},

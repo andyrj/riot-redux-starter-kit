@@ -1,5 +1,4 @@
 import todo from './todo';
-import 'babel-polyfill';
 
 export default function todos(state = [], action) {
 	switch(action.type) {
